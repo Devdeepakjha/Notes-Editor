@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create New Note</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Create New Note</h1>
+    <form method="post" action="/Notes" class="note-form">
+      <input type="text" name="title" placeholder="Enter title" required /> <br/><br/>
+      <textarea name="content" placeholder="Write your note here..." required></textarea> <br/><br/>
+      <button type="submit">Add Note</button>
+    </form>
+  </div>
+</body>
+</html>

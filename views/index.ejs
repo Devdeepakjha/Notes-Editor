@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Notes</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">My Notes</h1>
+
+    <% for (note of Notes) { %>
+      <div class="note-card">
+        <p class="note-id">ID: <%= note.id %></p>
+        <h3 class="note-title"><%= note.title %></h3>
+        <p class="note-content"><%= note.content %></p>
+        <a href="/Notes/<%= note.id %>" class="detail-link">🔍 See Note in Detail</a>
+        <a href="/Notes/<%= note.id %>/edit" class="edit-btn">✏️ Edit</a>
+        <form method="POST" action="/Notes/<%= note.id %>?_method=DELETE" class="delete-form">
+         <button class="delete-btn">🗑️ Delete Post</button>
+        </form>
+
+
+
+      </div>
+    <% } %>
+
+    <br>
+    <br>
+    <a href="/Notes/new" class="add-note-btn">➕ Add New Note</a>
+  </div>
+</body>
+</html>

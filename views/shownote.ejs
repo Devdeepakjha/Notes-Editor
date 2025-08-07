@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Details</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Note Details</h1>
+
+    <p class="note-id">Note ID: <%= note.id %></p>
+    <div class="note-card">
+      <h3 class="note-title"><%= note.title %></h3>
+      <p class="note-content"><%= note.content %></p>
+    </div>
+
+    <br />
+    <a href="/Notes" class="add-note-btn">⬅ Back to All Notes</a>
+  </div>
+</body>
+</html>
