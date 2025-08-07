@@ -13,6 +13,11 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, "public")));
 
+//rember this
+app.get("/", (req, res) => {
+  res.redirect("/Notes");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
